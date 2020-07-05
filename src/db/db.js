@@ -1,8 +1,8 @@
-const Sequelize = require('sequelize');
+import Sequelize from 'sequelize';
 
 const { DB_HOST, DB_USER, DB_USER_PASSWORD } = process.env;
 
-const db = new Sequelize('app', DB_USER, DB_USER_PASSWORD, {
+const db = new Sequelize('finance', DB_USER, DB_USER_PASSWORD, {
   host: DB_HOST,
   dialect: 'postgres',
 });

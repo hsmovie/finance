@@ -9,12 +9,14 @@ const CorpList = db.define(
       defaultValue: Sequelize.UUIDV1,
       primaryKey: true,
     },
-    date: {
+    name: {
       type: Sequelize.STRING,
       unique: true,
-      defaultValue: shortid.generate(),
     },
-    epsEstimated: {
+    price: {
+      type: Sequelize.FLOAT,
+    },
+    exchange: {
       type: Sequelize.STRING,
     },
   },

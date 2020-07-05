@@ -4,8 +4,8 @@ export function associate() {
   User.associate();
 }
 
-export default function sync() {
+export default async () => {
   console.log('sync');
   associate();
-  db.sync();
-}
+  await db.sync();
+};
